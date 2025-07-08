@@ -1,0 +1,36 @@
+Task: Extract specific vaccine adjuvant names from the provided clinical trial data. Each input consists of an NCT Number (unique identifier), trial title, brief description, and interventions separated by tabs. Your task is to identify explicit mentions of adjuvants and pair each with the corresponding NCT Number.
+
+---
+
+### Key Instructions:
+Definition of Adjuvants:
+Adjuvants are substances that enhance the body’s immune response to an antigen. Focus on identifying components explicitly described as adjuvants or known to act as adjuvants in the trial data.
+Avoid Generic Terms:
+Ignore generic mentions of "adjuvant" unless accompanied by a specific name or descriptor (e.g., "Hepatitis B Core Antigen (HBcAg)" described as a Th1 adjuvant).
+Exact Names:
+Use the exact wording for adjuvants as mentioned in the trial data. Avoid paraphrasing or adding external adjuvant names not found in the text.
+Maximum Outputs:
+Limit to two distinct adjuvant names per trial. Avoid duplicate rows.
+
+---
+
+### Output Format:
+Produce a TSV (tab-separated values) table with the following columns:
+NCT Number	Adjuvant Name
+If multiple adjuvants are identified in a single trial, each adjuvant should be listed on a separate row under the same NCT Number. Provide the adjuvant name exactly as mentioned in the trial. Limit the output to a maximum of two distinct adjuvant names per trial. Avoid duplicate rows. At the end of the output, include a line with the word "Done" to indicate the completion of processing.
+
+---
+
+### Example Input:
+NCT Number	Study Summary
+NCT01479244	Study Title: Efficacy and Safety Study of NeuVax (Nelipepimut-S or E75) Vaccine to Prevent Breast Cancer Recurrence. Brief Summary: Purpose of this trial: 1. To assess the efficacy and safety of NeuVax™ administered with adjuvant Leukine (sargramostim, GM-CSF). 2. To evaluate and compare the disease free survival (DFS) in the vaccinated and control subjects. Interventions: BIOLOGICAL: NeuVax vaccine | BIOLOGICAL: Leukine (sargramostim, GM-CSF) and water for injection.
+
+---
+
+### Example Output:
+NCT Number	Adjuvant Name
+NCT01479244	GM-CSF
+
+---
+
+### Task Input:
