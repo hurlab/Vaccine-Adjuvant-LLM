@@ -1,0 +1,48 @@
+Task: Extract specific vaccine adjuvant names from the provided article data. Each input consists of a PMID (unique identifier), article title, and abstract separated by tabs. Your task is to identify explicit mentions of adjuvants and pair each with the corresponding PMID.
+
+---
+
+### Key Instructions:
+Definition of Adjuvants:
+Adjuvants are substances that enhance the body’s immune response to an antigen. Focus on identifying components explicitly described as adjuvants or known to act as adjuvants in the article.
+
+Avoid Generic Terms:
+Ignore generic mentions of "adjuvant" unless accompanied by a specific name or descriptor (e.g., "Hepatitis B Core Antigen (HBcAg)" described as a Th1 adjuvant).
+
+Exact Names:
+Use the exact wording for adjuvants as mentioned in the article. Avoid paraphrasing or adding external adjuvant names not found in the text.
+
+Maximum Outputs:
+Limit to two distinct adjuvant names per article. Avoid duplicate rows.
+
+---
+
+### Output Format:
+Produce a TSV (tab-separated values) table with the following columns:
+PMID	Adjuvant Name
+
+If multiple adjuvants are identified in a single article, each adjuvant should be listed on a separate row under the same PMID. Provide the adjuvant name exactly as mentioned in the article. Limit the output to a maximum of two distinct adjuvant names per article. Avoid duplicate rows. At the end of the output, include a line with the word "Done" to indicate the completion of processing.
+
+---
+
+### Example Input:
+PMID	Article
+PMID_22425788	Title: Evaluation of immune responses to a Plasmodium vivax CSP-based recombinant protein vaccine candidate in combination with second-generation adjuvants in mice. Abstract: Plasmodium vivax is the major cause of malaria outside of sub-Saharan Africa and causes morbidity and results in significant economic impact in developing countries. In order to produce a P. vivax vaccine for global use, we have previously reported the development of VMP001, based on the circumsporozoite protein (CSP) of P. vivax. Our interest is to evaluate second-generation vaccine formulations to identify novel combinations of adjuvants capable of inducing strong, long-lasting immune responses. In this study, groups of C57BL/6J mice were immunized subcutaneously three times with VMP001 emulsified with synthetic TLR4 (GLA) or TLR7/8 (R848) agonist in stable emulsion (SE), a combination of the TLR4 and TLR7/8 agonists, or SE alone. Sera and splenocytes were tested for the presence of antigen-specific humoral and cellular responses, respectively. All groups of mice generated high titers of anti-P. vivax IgG antibodies as detected by ELISA and immunofluorescence assay. GLA-SE promoted a shift in the antibody response to a Th1 profile, as demonstrated by the change in IgG2c/IgG1 ratio. In addition, GLA-SE induced a strong cellular immune response characterized by multi-functional, antigen-specific CD4(+) T cells secreting IL-2, TNF and IFN-Î³. In contrast, mice immunized with SE or R848-SE produced low numbers of antigen-specific CD4(+) T cells, and these T cells secreted IL-2 and TNF, but not IFN-Î³. Finally, R848-SE did not enhance the immune response compared to GLA-SE alone. Based on these results, we conclude that the combination of VMP001 and GLA-SE is highly immunogenic in mice and may serve as a potential second-generation vaccine candidate against vivax malaria.
+PMID_27005808	Title: Pulmonary immunity and durable protection induced by the ID93/GLA-SE vaccine candidate against the hyper-virulent Korean Beijing Mycobacterium tuberculosis strain K. Abstract: The majority of tuberculosis (TB) vaccine candidates advanced to clinical trials have been evaluated preclinically using laboratory-adapted strains. However, it has been proposed that challenge with clinical isolates in preclinical vaccine testing could provide further and more practical validation. Here, we tested the ID93/GLA-SE TB vaccine candidate against the clinical Mycobacterium tuberculosis (Mtb) strain K (Mtb K) belonging to the Beijing family, the most prevalent Mtb strain in South Korea. Mice immunized with ID93/GLA-SE exhibited a significant reduction in bacteria and reduced lung inflammation against Mtb K when compared to non-immunized controls. In addition, we analyzed the immune responses in the lungs of ID93/GLA-SE-immunized mice, and showed that ID93/GLA-SE was able to elicit sustained Th1-biased immune responses including antigen-specific multifunctional CD4(+) T cell co-producing IFN-γ, TNF-α, and IL-2 as well as a high magnitude of IFN-γ response for up to 10 weeks post-challenge. Notably, further investigation of T cell subsets in the lung following challenge showed remarkable generation of CD8(+) central memory T cells by ID93/GLA-SE-immunization. Our findings showed that ID93/GLA-SE vaccine confers a high level of robust protection against the hypervirulent Mtb Beijing infection which was characterized by pulmonary Th1-polarized T-cell immune responses. These findings may also provide relevant information for potential utility of this vaccine candidate in East-Asian countries where the Beijing genotype is highly prevalent.Keywords:Beijing family; GLA-SE; ID93; K strain; Tuberculosis.
+PMID_26407920	Title: Advax™, a novel microcrystalline polysaccharide particle engineered from delta inulin, provides robust adjuvant potency together with tolerability and safety. Abstract: There is an ongoing need for new adjuvants to facilitate development of vaccines against HIV, tuberculosis, malaria and cancer, amongst many others. Unfortunately, the most potent adjuvants are often associated with toxicity and safety issues. Inulin, a plant-derived polysaccharide, has no immunological activity in its native soluble form but when crystallized into a stable microcrystalline particulate from (delta inulin) acquires potent adjuvant activity. Delta inulin has been shown to enhance humoral and cellular immune responses against a broad range of co-administered viral, bacterial, parasitic and toxin antigens. Inulin normally crystallizes as large heterogeneous particles with a broad size distribution and variable solubility temperatures. To ensure reproducible delta inulin particles with a consistent size distribution and temperature of solubility, a current Good Manufacturing Practice (cGMP) process was designed to produce Advax™ adjuvant. In its cCMP form, Advax™ adjuvant has proved successful in human trials of vaccines against seasonal and pandemic influenza, hepatitis B and insect sting anaphylaxis, enhancing antibody and T-cell responses while being safe and well tolerated. Advax™ adjuvant represents a novel human adjuvant that enhances both humoral and cellular immunity. This review describes the discovery and development of Advax™ adjuvant and research into its unique mechanism of action.Keywords:Adjuvant; Advax™; Delta inulin; Immunity; Vaccine. 
+PMID_34516780	Title: Vaccine-driven lung TRM cells provide immunity againstKlebsiellavia fibroblast IL-17R signaling. Abstract: Tissue-resident memory (TRM) cells are thought to play a role in lung mucosal immunity to pathogens, but strategies to elicit TRM by mucosal vaccines have not yet been fully realized. Here, we formulated a vaccine composed of outer membrane protein (Omp) X fromKlebsiella pneumoniaeand LTA1 adjuvant that was administered by the intrapulmonary route. This vaccine elicited both TH1 and TH17 cells that shared transcriptional features with cells elicited by heat-killedK. pneumoniae. Antibody responses were required to prevent bacterial dissemination but dispensable for lung-specific immunity. In contrast, lung immunity required CD4+T cells, STAT3 expression, and IL-17R signaling in fibroblasts. Lung-specific CD4+T cells from OmpX+LTA1â€“immunized mice were observed homing to the lung and could mediate protection against infection in an adoptive transfer model. Vaccine-elicited TH17 cells showed reduced plasticity and were resistant to the immunosuppressant FK506 compared with TH1 cells, and TH17 cells conferred protection under conditions of transplant immunosuppression. These data demonstrate a promising vaccine strategy that elicits lung TRM cells and promotes serotype-independent immunity toK. pneumoniae. 
+
+---
+
+### Example Output:
+PMID	Adjuvant Name
+PMID_22425788	GLA-SE
+PMID_22425788	Stable Emulsion (SE)
+PMID_27005808   GLA-SE
+PMID_26407920   Advax
+PMID_34516780	LTA1
+Done
+
+---
+
+### Task Input:

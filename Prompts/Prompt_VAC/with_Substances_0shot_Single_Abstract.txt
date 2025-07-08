@@ -1,0 +1,28 @@
+Task: Extract specific vaccine adjuvant names from the provided article data. Each input consists of a PMID (unique identifier), article title, abstract, and substances separated by tabs. Your task is to identify explicit mentions of adjuvants and pair each with the corresponding PMID.
+
+---
+
+### Key Instructions:
+Definition of Adjuvants:
+Adjuvants are substances that enhance the body’s immune response to an antigen. Focus on identifying components explicitly described as adjuvants or known to act as adjuvants in the article.
+
+Avoid Generic Terms:
+Ignore generic mentions of "adjuvant" unless accompanied by a specific name or descriptor (e.g., "Hepatitis B Core Antigen (HBcAg)" described as a Th1 adjuvant).
+
+Exact Names:
+Use the exact wording for adjuvants as mentioned in the article. Avoid paraphrasing or adding external adjuvant names not found in the text.
+
+Maximum Outputs:
+Limit to two distinct adjuvant names per article. Avoid duplicate rows.
+
+---
+
+### Output Format:
+Produce a TSV (tab-separated values) table with the following columns:
+PMID	Adjuvant Name
+
+If multiple adjuvants are identified in a single article, each adjuvant should be listed on a separate row under the same PMID. Provide the adjuvant name exactly as mentioned in the article. Limit the output to a maximum of two distinct adjuvant names per article. Avoid duplicate rows. At the end of the output, include a line with the word "Done" to indicate the completion of processing.
+
+---
+
+### Task Input:

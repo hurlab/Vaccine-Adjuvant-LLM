@@ -1,0 +1,42 @@
+Task: Extract specific vaccine adjuvant names from the provided article data. Each input consists of a PMID (unique identifier), article title, and abstract separated by tabs. Your task is to identify explicit mentions of adjuvants and pair each with the corresponding PMID.
+
+---
+
+### Key Instructions:
+Definition of Adjuvants:
+Adjuvants are substances that enhance the body’s immune response to an antigen. Focus on identifying components explicitly described as adjuvants or known to act as adjuvants in the article.
+
+Avoid Generic Terms:
+Ignore generic mentions of "adjuvant" unless accompanied by a specific name or descriptor (e.g., "Hepatitis B Core Antigen (HBcAg)" described as a Th1 adjuvant).
+
+Exact Names:
+Use the exact wording for adjuvants as mentioned in the article. Avoid paraphrasing or adding external adjuvant names not found in the text.
+
+Maximum Outputs:
+Limit to two distinct adjuvant names per article. Avoid duplicate rows.
+
+---
+
+### Output Format:
+Produce a TSV (tab-separated values) table with the following columns:
+PMID	Adjuvant Name
+
+If multiple adjuvants are identified in a single article, each adjuvant should be listed on a separate row under the same PMID. Provide the adjuvant name exactly as mentioned in the article. Limit the output to a maximum of two distinct adjuvant names per article. Avoid duplicate rows. At the end of the output, include a line with the word "Done" to indicate the completion of processing.
+
+---
+
+### Example Input:
+PMID	Article
+PMID_22425788	Title: Evaluation of immune responses to a Plasmodium vivax CSP-based recombinant protein vaccine candidate in combination with second-generation adjuvants in mice. Abstract: Plasmodium vivax is the major cause of malaria outside of sub-Saharan Africa and causes morbidity and results in significant economic impact in developing countries. In order to produce a P. vivax vaccine for global use, we have previously reported the development of VMP001, based on the circumsporozoite protein (CSP) of P. vivax. Our interest is to evaluate second-generation vaccine formulations to identify novel combinations of adjuvants capable of inducing strong, long-lasting immune responses. In this study, groups of C57BL/6J mice were immunized subcutaneously three times with VMP001 emulsified with synthetic TLR4 (GLA) or TLR7/8 (R848) agonist in stable emulsion (SE), a combination of the TLR4 and TLR7/8 agonists, or SE alone. Sera and splenocytes were tested for the presence of antigen-specific humoral and cellular responses, respectively. All groups of mice generated high titers of anti-P. vivax IgG antibodies as detected by ELISA and immunofluorescence assay. GLA-SE promoted a shift in the antibody response to a Th1 profile, as demonstrated by the change in IgG2c/IgG1 ratio. In addition, GLA-SE induced a strong cellular immune response characterized by multi-functional, antigen-specific CD4(+) T cells secreting IL-2, TNF and IFN-Î³. In contrast, mice immunized with SE or R848-SE produced low numbers of antigen-specific CD4(+) T cells, and these T cells secreted IL-2 and TNF, but not IFN-Î³. Finally, R848-SE did not enhance the immune response compared to GLA-SE alone. Based on these results, we conclude that the combination of VMP001 and GLA-SE is highly immunogenic in mice and may serve as a potential second-generation vaccine candidate against vivax malaria.
+
+---
+
+### Example Output:
+PMID	Adjuvant Name
+PMID_22425788	GLA-SE
+PMID_22425788	Stable Emulsion (SE)
+Done
+
+---
+
+### Task Input:
