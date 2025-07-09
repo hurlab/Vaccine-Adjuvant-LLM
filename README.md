@@ -14,7 +14,7 @@ Vaccine adjuvants enhance immune responses but are often inconsistently document
 
 ## Method Overview
 
-![Pipeline Diagram](assets/Method.svg)
+![Pipeline Diagram](Assets/Method.svg)
 
 ---
 
@@ -22,11 +22,12 @@ Vaccine adjuvants enhance immune responses but are often inconsistently document
 
 ```
 Vaccine-Adjuvant-LLM/
-├── Dataset/                    # Input biomedical literature and ground truth
+├── Datasets/                   # Input biomedical literature and ground truth
 ├── Prompts/                    # Prompt templates for few-shot LLM queries
+├── Assets/                     # Assets for Readme 
 ├── Preprocessing_Dataset.ipynb # Data cleaning and filtering
-├── Run_GPT.ipynb               # Classification using GPT-4
-├── Run_Llama.ipynb             # Classification using Llama3
+├── Run_GPT.ipynb               # Classification using GPT
+├── Run_Llama.ipynb             # Classification using Llama
 ├── Run_Gemma.ipynb             # Classification using Gemma
 ├── Postprocess_Output.ipynb    # Format LLM responses
 ├── Evaluation.ipynb            # Compute F1, precision, recall
