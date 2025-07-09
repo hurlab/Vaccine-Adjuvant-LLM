@@ -82,5 +82,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Citation
 
 Rehana H, Zheng J, Yeh L, Bansal B, Çam NB, Jemiyo C, McGregor B, Özgür A, He Y, Hur J.  
-*Cancer Vaccine Adjuvant Name Recognition from Biomedical Literature using Large Language Models*.  
+**Cancer Vaccine Adjuvant Name Recognition from Biomedical Literature using Large Language Models.**  
+Proceedings of the American Medical Informatics Association (AMIA) Annual Symposium, 2025.  _(In press. Accepted for publication)_
+
 **ArXiv** [Preprint]. 2025 Feb 12: arXiv:2502.09659v1. PMID: 40196147; PMCID: PMC11975310.
