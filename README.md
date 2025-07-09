@@ -36,30 +36,14 @@ Vaccine-Adjuvant-LLM/
 
 ---
 
-## Performance Results
-
-The following figures show F1 score (%) on the **VAC** and **AdjuvareDB** datasets across 0–4 shot prompts.
-
-### VAC Dataset (Side-by-Side Comparison)
-
-![VAC Scores](assets/VAC.png)
-
-### AdjuvareDB Dataset (Side-by-Side Comparison)
-
-![AdjuvareDB Scores](assets/AdjuvareDB.png)
-
-> **GPT-4o consistently outperforms** other models, especially in higher-shot settings and when substance/intervention hints are included.
-
----
-
 ##  Setup Instructions
 
 ### Dependencies
 
-Install the required packages:
+Install all dependencies from `requirements.txt`:
 
 ```bash
-pip install torch transformers sentence-transformers openai scikit-learn pandas
+pip install -r requirements.txt
 ```
 
 You will also need:
